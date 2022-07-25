@@ -1,7 +1,9 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
+import { Toaster } from "react-hot-toast";
 import { ThemeProvider } from "styled-components";
 import App from "./App";
+import Providers from "./providers";
 import GlobalStyled from "./styles/global";
 import theme from "./styles/theme";
 
@@ -10,8 +12,11 @@ const root = createRoot(container);
 
 root.render(
   <ThemeProvider theme={theme}>
-    <App />
+    <Providers>
+      <App />
+    </Providers>
 
+    <Toaster />
     <GlobalStyled />
   </ThemeProvider>
 );
