@@ -1,6 +1,11 @@
 import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
+    *{
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }
     /* http://meyerweb.com/eric/tools/css/reset/
     v2.0 | 20110126
     License: none (public domain)
@@ -18,11 +23,9 @@ export default createGlobalStyle`
     figure, figcaption, footer, header, hgroup, 
     menu, nav, output, ruby, section, summary,
     time, mark, audio, video {
-        margin: 0;
-        padding: 0;
-        border: 0;
         font-size: 100%;
         font: inherit;
+        font-family: 'Roboto', sans-serif;
         vertical-align: baseline;
     }
     /* HTML5 display-role reset for older browsers */
@@ -47,5 +50,9 @@ export default createGlobalStyle`
     table {
         border-collapse: collapse;
         border-spacing: 0;
+    }
+    
+    body{
+        background-color: ${(p) => p.theme.colors.white_0};
     }
 `;
